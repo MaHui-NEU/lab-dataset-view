@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>马辉教授课题组数据集 / Datasets of Prof. Ma Hui's Research Group</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #fdfdfd;
+      color: #333;
+      padding: 40px;
+      max-width: 960px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #005ea2;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    nav a {
+      text-decoration: none;
+      margin: 0 15px;
+      color: #007acc;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #333;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      font-size: 20px;
+    }
+    .dataset-box {
+      border: 1px solid #ccc;
+      padding: 15px;
+      background-color: #f9f9f9;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      overflow-x: auto;
+      font-size: 14px;
+    }
+    a {
+      color: #0066cc;
+    }
+    a:hover {
+      color: #003366;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    th, td {
+      border: 1px solid #bbb;
+      padding: 8px 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    .equipment-img {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .equipment-img img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+    .caption {
+      font-size: 14px;
+      color: #555;
+      margin-top: 8px;
+      text-align: left;
+    }
+  
+    h1, h2 {
+      font-weight: 600;
+    }
+    .dataset-box {
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    table th {
+      background-color: #e8f1ff;
+      color: #004080;
+    }
+    table td {
+      background-color: #fcfcfc;
+    }
+    a.btn-download {
+      display: inline-block;
+      background-color: #007acc;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+    a.btn-download:hover {
+      background-color: #005fa3;
+    }
+</style>
+</head>
+<body>
+
+<h1>马辉教授课题组数据集 / Datasets of Prof. Ma Hui's Research Group</h1>
+
+<nav>
+  <a href="#intro">简介 / Introduction</a>
+  <a href="#datasets">数据集 / Datasets</a>
+  <a href="#contact">联系 / Contact</a>
+</nav>
+
+<section id="intro">
+  <h2>简介 / Introduction</h2>
+  <p>欢迎访问我们的课题组数据集网站。本平台用于展示与分享我们课题组公开的数据集，供研究使用。</p>
+  <p>Welcome to our lab's dataset portal. This platform shares public datasets curated or collected by our research group.</p>
+</section>
+
+<section id="datasets">
+  <h2>数据集 / Datasets</h2>
+  <div class="dataset-box">
+    <p><b>数据集名称 / Dataset Name:</b> 固定点碰摩转子实验数据 / Fixed-point Rubbing Rotor Experimental Data</p>
+
+    <p><b>数据简介 / Description:</b> 该数据集来源于马辉教授发表于《Mechanical Systems and Signal Processing》的论文。实验采用碰摩实验平台，研究固定点碰摩下的转子动力学响应。平台包括双盘转子、可调限位装置及传感器系统，采集频率为2000 Hz。通过改变转速与碰摩间隙模拟不同工况。<br>
+    This dataset is derived from Prof. Ma Hui’s publication in <i>Mechanical Systems and Signal Processing</i>. A rubbing test rig is used to investigate the dynamic behavior of a rotor system under fixed-point rubbing conditions. The rig consists of a dual-disc rotor, adjustable limiters, and a sensor system. The sampling frequency is 2000 Hz, and varying speeds and gap distances are used to simulate different working conditions.</p>
+
+    <div class="equipment-img">
+      <img src="rubbing test rig.png" alt="实验设备图" style="width: 60%;">
+      <p>图：碰摩实验平台结构示意图<br>Figure: Structure of the Rubbing Test Rig</p>
+      <div class="caption">
+        图示部件标注说明 / Component Annotations:<br>
+        (1) 螺栓 Bolt；(2) 平台 Platform；(3) 传感器支架 Sensor holder；(4) 固定点弹性杆 Fixed-point elastic rod；<br>
+        (5) 涡流传感器 Eddy current transducer；(6) 油杯 Oil cup；(7) 滑动轴承 Sliding bearing；(8) 转子盘 Disc；<br>
+        (9) 转轴 Shaft；(10) 弧形碰摩装置 Arc rubbing device；(11) 石墨轴承 Graphite bearing；<br>
+        (12) 联轴器 Coupling；(13) 电机 Motor
+      </div>
+    </div>
+
+    <h3>📌 材料与偏心参数 / Material and Unbalance Parameters</h3>
+<table>
+  <tr>
+    <th>参数名称 / Parameter</th>
+    <th>数值 / Value</th>
+    <th>单位 / Unit</th>
+  </tr>
+  <tr>
+    <td>弹性模量 E / Elastic Modulus E</td>
+    <td>207</td>
+    <td>GPa</td>
+  </tr>
+  <tr>
+    <td>泊松比 ν / Poisson's Ratio ν</td>
+    <td>0.3</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>材料密度 ρ / Material Density ρ</td>
+    <td>7850</td>
+    <td>kg/m³</td>
+  </tr>
+  <tr>
+    <td>偏心量 mr / Unbalance (mr)</td>
+    <td>0.156</td>
+    <td>g·m</td>
+  </tr>
+</table>
+
+    <h3>📌 实验工况设置 / Experimental Operating Conditions</h3>
+<table>
+  <tr>
+    <th>案例编号 / Case No.</th>
+    <th>转速 / Speed (rpm)</th>
+    <th>转子-杆间隙 g₀ (mm) / Rotor-Rod Gap g₀ (mm)</th>
+    <th>描述 / Description</th>
+  </tr>
+  <tr>
+    <td>Case 1 (Ω/ωₙ₁ = 0.63)</td>
+    <td>1000</td>
+    <td>85 / 65 / 45</td>
+    <td>低速运行，间隙逐步减小 / Low speed, decreasing gap</td>
+  </tr>
+  <tr>
+    <td>Case 2 (Ω/ωₙ₁ = 3.15)</td>
+    <td>5000</td>
+    <td>224 / 220 / 210</td>
+    <td>中高速运行，小间隙碰摩 / Medium-high speed, small-gap rubbing</td>
+  </tr>
+  <tr>
+    <td>Case 3 (Ω/ωₙ₁ = 5.35)</td>
+    <td>8500</td>
+    <td>210 / 200 / 190</td>
+    <td>高速运行，多级间隙演化 / High speed, progressive gap changes</td>
+  </tr>
+</table>
+
+    <p><b>数据格式 / Data Format:</b> 原始振动响应信号、碰摩冲击时域数据、频谱分析图等。<br>
+    Raw vibration response signals, time-domain rubbing force data, and frequency spectrum plots, etc.</p>
+
+    <p><b>下载地址 / Download Link:</b>
+      <a class="btn-download" href="https://github.com/yourname/yourrepo" target="_blank">📥 点击下载实验数据 / Download Dataset</a>
+    </p>
+
+    <p><b>引用格式 / Citation:</b></p>
+    <pre>
+@article{ma2013rubbing,
+  title={Fixed-point rubbing fault characteristic analysis of a rotor system based on contact theory},
+  author={Ma, Hui and Shi, Chaoyang and Han, Qingkai and Wen, Bangchun},
+  journal={Mechanical Systems and Signal Processing},
+  volume={38},
+  pages={137--153},
+  year={2013},
+  doi={10.1016/j.ymssp.2012.10.009}
+}
+    </pre>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>联系方式 / Contact</h2>
+  <p>📧 邮箱 / Email: mahui_2007@163.com</p>
+  <p>🔗 课题组主页 / Lab Homepage:
+    <a href="http://faculty.neu.edu.cn/mahui/en/index/138064/list/index.htm" target="_blank">
+      马辉教授个人主页 / Prof. Ma Hui's Official Homepage
+    </a>
+  </p>
+</section>
+
+</body>
+</html>
