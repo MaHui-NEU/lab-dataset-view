@@ -1,248 +1,1116 @@
-
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <title>马辉教授课题组数据集 / Datasets of Prof. Ma Hui's Research Group</title>
-  <style>
-    body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #fdfdfd;
-      color: #333;
-      padding: 40px;
-      max-width: 960px;
-      margin: auto;
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>马辉教授课题组数据集——直/斜/人字齿轮传动系统典型故障实验</title>
+<style>zh
+    :root {
+      --main-blue: #005ea2;
+      --hover-blue: #007acc;
+      --gray-bg: #f9f9f9;
     }
-    h1 {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 10px;
-      color: #005ea2;
-    }
-    nav {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    nav a {
-      text-decoration: none;
-      margin: 0 15px;
-      color: #007acc;
-      font-weight: bold;
-      font-size: 15px;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    h2 {
-      color: #333;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-      font-size: 20px;
-    }
-    .dataset-box {
-      border: 1px solid #ccc;
-      padding: 15px;
-      background-color: #f9f9f9;
-    }
-    pre {
-      background-color: #f4f4f4;
-      padding: 10px;
-      overflow-x: auto;
-      font-size: 14px;
-    }
-    a {
-      color: #0066cc;
-    }
-    a:hover {
-      color: #003366;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 15px 0;
-    }
-    th, td {
-      border: 1px solid #bbb;
-      padding: 8px 12px;
-      text-align: center;
-    }
-    th {
-      background-color: #f0f0f0;
-    }
-    .equipment-img {
-      text-align: center;
-      margin-top: 15px;
-    }
-    .equipment-img img {
-      max-width: 100%;
-      height: auto;
-      border: 1px solid #ccc;
-      margin-top: 10px;
-    }
-    .caption {
-      font-size: 14px;
-      color: #555;
-      margin-top: 8px;
-      text-align: left;
-    }
-  
-    h1, h2 {
-      font-weight: 600;
-    }
-    .dataset-box {
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
-    table th {
-      background-color: #e8f1ff;
-      color: #004080;
-    }
-    table td {
-      background-color: #fcfcfc;
-    }
-    a.btn-download {
-      display: inline-block;
-      background-color: #007acc;
-      color: white;
-      padding: 10px 16px;
-      text-decoration: none;
-      border-radius: 6px;
-      margin-top: 10px;
-      transition: background-color 0.3s;
-    }
-    a.btn-download:hover {
-      background-color: #005fa3;
-    }
-</style>
+body {
+  font-family: 'Noto Sans SC', "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fdfdfd;
+  color: #333;
+  padding: 40px;
+  max-width: 960px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: var(--main-blue);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 20px;
+  margin-bottom: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--hover-blue);
+  font-weight: bold;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #e6f2ff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 100px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 50px;
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  color: var(--main-blue);
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+  font-size: 22px;
+  margin-top: 20px;
+  position: relative;
+  padding-left: 14px;
+}
+
+h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 6px;
+  height: 20px;
+  background: #1da1f2;
+  border-radius: 2px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th,
+td {
+  border: 1px solid #bbb;
+  padding: 10px 14px;
+  text-align: center;
+}
+
+th {
+  background-color: #e8f1ff;
+  color: var(--main-blue);
+}
+
+td {
+  background-color: #fcfcfc;
+}
+
+table tbody tr:hover {
+  background-color: #f0f8ff;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-pan {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #007acc, #00c6ff);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0, 102, 204, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-pan::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-25deg);
+  transition: 0.75s;
+}
+
+.btn-pan:hover::after {
+  left: 125%;
+}
+
+.btn-pan:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 102, 204, 0.4);
+}
+
+.citation-box {
+  background: rgba(255, 255, 255, 0.6);
+  border-left: 4px solid #1da1f2;
+  backdrop-filter: blur(4px);
+  padding: 16px;
+  font-family: 'Courier New', monospace;
+  border-radius: 10px;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+}
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.sticky-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(to right, #005ea2, #007acc);
+  padding: 12px 30px;
+  z-index: 1000;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.sticky-header h1 {
+  font-size: 20px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.sticky-header .sub {
+  font-weight: normal;
+  font-size: 14px;
+  color: #d0e6f8;
+}
+
+.tab-btns button {
+  background: white;
+  color: #005ea2;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.tab-btns button.active,
+.tab-btns button:hover {
+  background: #003f75;
+  color: white;
+}
+
+  </style>
 </head>
 <body>
-
-<h1>马辉教授课题组数据集 / Datasets of Prof. Ma Hui's Research Group</h1>
-
-<nav>
-  <a href="#intro">简介 / Introduction</a>
-  <a href="#datasets">数据集 / Datasets</a>
-  <a href="#contact">联系 / Contact</a>
-</nav>
-
-<section id="intro">
-  <h2>简介 / Introduction</h2>
-  <p>欢迎访问我们的课题组数据集网站。本平台用于展示与分享我们课题组公开的数据集，供研究使用。</p>
-  <p>Welcome to our lab's dataset portal. This platform shares public datasets curated or collected by our research group.</p>
-</section>
-
-<section id="datasets">
-  <h2>数据集 / Datasets</h2>
+<header class="sticky-header">
+<div class="header-left">
+<h1>马辉教授课题组数据集<br/><span class="sub">Datasets of Prof. Ma Hui's Research Group</span></h1>
+</div>
+<div class="header-right tab-btns">
+<button class="tablink active" onclick="openTab(event, 'intro')">简介<br/>Overview</button>
+<button class="tablink" onclick="openTab(event, 'gear')">直/斜/人字齿轮<br/>Gear</button>
+<button class="tablink" onclick="openTab(event, 'bearing')">轴承保持架<br/>Bearing</button>
+</div>
+</header>
+<div id="intro" style="display:block">
+<!-- ========================== 数据集简介 ========================== -->
+<section id="IntroOverview" data-aos="fade-up">
+  <h2>数据集简介 / Dataset Overview</h2>
   <div class="dataset-box">
-    <p><b>数据集名称 / Dataset Name:</b> 固定点碰摩转子实验数据 / Fixed-point Rubbing Rotor Experimental Data</p>
+    <p>马辉教授课题组长期开展面向<span style="font-weight:bold">旋转机械故障建模、性能退化评估与剩余寿命预测</span>的研究工作，形成了丰富、系统的实验数据资源。</p>
 
-    <p><b>数据简介 / Description:</b> 该数据集来源于马辉教授发表于《Mechanical Systems and Signal Processing》的论文。实验采用碰摩实验平台，研究固定点碰摩下的转子动力学响应。平台包括双盘转子、可调限位装置及传感器系统，采集频率为2000 Hz。通过改变转速与碰摩间隙模拟不同工况。<br>
-    This dataset is derived from Prof. Ma Hui’s publication in <i>Mechanical Systems and Signal Processing</i>. A rubbing test rig is used to investigate the dynamic behavior of a rotor system under fixed-point rubbing conditions. The rig consists of a dual-disc rotor, adjustable limiters, and a sensor system. The sampling frequency is 2000 Hz, and varying speeds and gap distances are used to simulate different working conditions.</p>
+    <p>目前已公开以下两个典型数据集，面向科研与工业界开放下载：</p>
 
-    <div class="equipment-img">
-      <img src="rubbing test rig.png" alt="实验设备图" style="width: 60%;">
-      <p>图：碰摩实验平台结构示意图<br>Figure: Structure of the Rubbing Test Rig</p>
-      <div class="caption">
-        图示部件标注说明 / Component Annotations:<br>
-        (1) 螺栓 Bolt；(2) 平台 Platform；(3) 传感器支架 Sensor holder；(4) 固定点弹性杆 Fixed-point elastic rod；<br>
-        (5) 涡流传感器 Eddy current transducer；(6) 油杯 Oil cup；(7) 滑动轴承 Sliding bearing；(8) 转子盘 Disc；<br>
-        (9) 转轴 Shaft；(10) 弧形碰摩装置 Arc rubbing device；(11) 石墨轴承 Graphite bearing；<br>
-        (12) 联轴器 Coupling；(13) 电机 Motor
-      </div>
-    </div>
+    <ul>
+      <li>
+        🔩 齿轮典型故障数据集 / Gear Typical Fault Dataset</a>：包括不同工况下的轻微擦伤、疲劳点蚀、断齿等齿轮故障类型，支持诊断与多工况建模。
+      </li>
+      <li>
+        🛞 轴承保持架全生命周期数据集 / Bearing Cage Full Lifecycle Dataset</a>：涵盖6210与6011两种型号轴承保持架的断裂演化全程信号，适用于寿命预测、退化建模研究。
+      </li>
+    </ul>
 
-    <h3>📌 材料与偏心参数 / Material and Unbalance Parameters</h3>
-<table>
-  <tr>
-    <th>参数名称 / Parameter</th>
-    <th>数值 / Value</th>
-    <th>单位 / Unit</th>
-  </tr>
-  <tr>
-    <td>弹性模量 E / Elastic Modulus E</td>
-    <td>207</td>
-    <td>GPa</td>
-  </tr>
-  <tr>
-    <td>泊松比 ν / Poisson's Ratio ν</td>
-    <td>0.3</td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <td>材料密度 ρ / Material Density ρ</td>
-    <td>7850</td>
-    <td>kg/m³</td>
-  </tr>
-  <tr>
-    <td>偏心量 mr / Unbalance (mr)</td>
-    <td>0.156</td>
-    <td>g·m</td>
-  </tr>
-</table>
-
-    <h3>📌 实验工况设置 / Experimental Operating Conditions</h3>
-<table>
-  <tr>
-    <th>案例编号 / Case No.</th>
-    <th>转速 / Speed (rpm)</th>
-    <th>转子-杆间隙 g₀ (mm) / Rotor-Rod Gap g₀ (mm)</th>
-    <th>描述 / Description</th>
-  </tr>
-  <tr>
-    <td>Case 1 (Ω/ωₙ₁ = 0.63)</td>
-    <td>1000</td>
-    <td>85 / 65 / 45</td>
-    <td>低速运行，间隙逐步减小 / Low speed, decreasing gap</td>
-  </tr>
-  <tr>
-    <td>Case 2 (Ω/ωₙ₁ = 3.15)</td>
-    <td>5000</td>
-    <td>224 / 220 / 210</td>
-    <td>中高速运行，小间隙碰摩 / Medium-high speed, small-gap rubbing</td>
-  </tr>
-  <tr>
-    <td>Case 3 (Ω/ωₙ₁ = 5.35)</td>
-    <td>8500</td>
-    <td>210 / 200 / 190</td>
-    <td>高速运行，多级间隙演化 / High speed, progressive gap changes</td>
-  </tr>
-</table>
-
-    <p><b>数据格式 / Data Format:</b> 原始振动响应信号、碰摩冲击时域数据、频谱分析图等。<br>
-    Raw vibration response signals, time-domain rubbing force data, and frequency spectrum plots, etc.</p>
-
-    <p><b>下载地址 / Download Link:</b>
-      <a class="btn-download" href="https://github.com/yourname/yourrepo" target="_blank">📥 点击下载实验数据 / Download Dataset</a>
-    </p>
-
-    <p><b>引用格式 / Citation:</b></p>
-    <pre>
-@article{ma2013rubbing,
-  title={Fixed-point rubbing fault characteristic analysis of a rotor system based on contact theory},
-  author={Ma, Hui and Shi, Chaoyang and Han, Qingkai and Wen, Bangchun},
-  journal={Mechanical Systems and Signal Processing},
-  volume={38},
-  pages={137--153},
-  year={2013},
-  doi={10.1016/j.ymssp.2012.10.009}
-}
-    </pre>
+    <p>上述数据集均含完整传感器配置、试验工况描述与可视化图示，便于科研人员快速开展验证实验。欢迎引用与合作。</p>
+    <p><span style="font-weight:bold">数据集持续更新中。。。</span></p>
   </div>
 </section>
 
-<section id="contact">
-  <h2>联系方式 / Contact</h2>
-  <p>📧 邮箱 / Email: mahui_2007@163.com</p>
-  <p>🔗 课题组主页 / Lab Homepage:
-    <a href="http://faculty.neu.edu.cn/mahui/en/index/138064/list/index.htm" target="_blank">
-      马辉教授个人主页 / Prof. Ma Hui's Official Homepage
-    </a>
-  </p>
+<!-- ========================== 教授简介 ========================== -->
+<section id="mahuiprof" data-aos="fade-up">
+  <h2>马辉教授简介 / Prof. Ma Hui</h2>
+  <div class="dataset-box" style= overflow-y:visible; padding-right:10px;">
+
+  <figure style="text-align:center;">
+  <img src="MaHui.png" alt="照片" style="width:20%; max-width:800px; margin: 5px auto;">
+  <figcaption style="font-size:14px; color:#555;"></figcaption>
+</figure>
+    <p>马辉，男，汉族，1978年9月出生，工学博士，中共党员，东北大学三级教授、博士生导师，现任职于机械工程与自动化学院。2008年8月-2011年3月，在沈阳鼓风机集团有限公司从事博士后研究工作；2014年11月至2015年10月，在英国谢菲尔德大学做访问学者，合作导师郎自强教授；2010年获得辽宁省优秀博士后，2011年度入选“教育部新世纪人才支持计划”、2018年入选辽宁省“百千万人才工程”百人层次、2018年入选“兴辽英才计划”青年拔尖人才、2020年入选第二批辽宁省学术头雁，2023年入选科睿唯安“全球高被引科学家”（工程领域），2021-2024连续4年入选爱思唯尔中国高被引学者，2020-2024连续4年入选美国斯坦福大学发布的“全球前2%顶尖科学家榜单”。</p>
+
+    <p>主要研究方向包括：
+    (1) 旋转机械动力学与数字孪生；
+    (2) 旋转机械智能诊断与寿命预测；
+    (3) 航空发动机管路系统动力学及振动控制。</p>
+
+    <p>现为东北大学闻邦椿院士课题组核心成员之一，“航空动力装备振动及控制”教育部重点实验室(B类)副主任。近几年主持国家重点研发计划课题1项，两机专项课题2项，国防科工局重大项目子课题1项，国家自然科学基金4项：含裂纹转子叶片动力学建模及非线性振动特性研究(项目编号：11972112)、航空发动机双转子-支承-机匣耦合系统典型碰摩激振机理研究(项目编号：11772089)、“航空发动机旋转叶片-涂层机匣碰摩机理及动力学特性研究(U1433109)”、“大型离心压缩机转子系统的耦合碰摩故障机理若干关键问题的研究(50805019)”，装备预研领域基金项目1项，教育部博士点基金、中国博士后基金、教育部基本科研费项目和机械传动/强度与振动国家重点实验室开放基金等纵向科研项目20余项，项目总经费3000余万元；同时参加了多个国家自然科学基金重点项目、973和863项目。获批国家发明专利46项（含国外发明专利1项）；以第1获奖人荣获教育部、辽宁省和中国振动工程学会自然科学二等奖3项；2023年度获Elsevier Crossley Best Paper Award (Mechanism and Machine Theory, 2021, 158: 104219) 2024年度获航空学报2020-2023高影响力论文1篇（Chinese Journal of Aeronautics, 2021, 34: 128–147）。</p>
+
+    <p>应邀担任《Journal of Dynamics, Monitoring and Diagnostics》副主编、《Machines》(SCI)专栏主编（Section Editor-in-Chief）、《振动工程学报》(EI)、《振动与冲击》(EI)、《Engineering Failure Analysis》(SCI)、《Advances in Mechanical Engineering》(SCI)、《Mechanical Sciences》(SCI)、、《Journal of Central South University》(SCI，青年编委)等杂志编委，国际机构与机器科学联合会(IFToMM)转子动力学技术委员会委员，中国振动工程学会转子动力学专业委员会委员，中国振动工程学会非线性振动专业委员会委员，辽宁省振动工程学会常务理事。以第1作者和通讯作者身份在《Mechanical Systems and Signal Processing》、《Mechanism and Machine Theory》、《Journal of Sound and Vibration》、《International Journal of Mechanical Sciences》等杂志发表论文300余篇，其中SCI检索论文188篇（JCR 1区129篇）、EI检索论文70余篇。论著被他引13000余次（Google Scholar），其中SCI他引6000余次，Google Scholar统计的H指数为66，Web of Sciences统计的H指数为58，Scopus统计的H指数为63，入选ESI高被引论文15篇，ESI热点论文3篇。在科学出版社和武汉理工大学出版社出版专著2部。</p>
+
+    <p style="margin-top:10px">🔗 学术主页：
+      <a href="https://scholar.google.com/citations?hl=zh-CN&user=06p_tTIAAAAJ" target="_blank">Google Scholar</a> |
+      <a href="https://www.researchgate.net/profile/Hui-Ma-57" target="_blank">ResearchGate</a> |
+      <a href="https://www.webofscience.com/wos/author/record/L-5829-2015" target="_blank">Web of Science</a> |
+      <a href="https://www.me.neu.edu.cn/2017/0505/c3259a54157/page.htm" target="_blank">东北大学官网</a>
+    </p>
+
+    <p style="margin-top:10px">📮 微信公众号：马辉团队</p>
+    <p>📆 更新时间：2025年6月24日</p>
+  </div>
 </section>
 
-</body>
+<!-- ========================== 联系方式 ========================== -->
+<section id="IntroContact" data-aos="fade-up">
+  <h2>联系方式 / Contact</h2>
+  <div class="dataset-box">
+    <p>📧 邮箱 / Email: <a href="mailto:mahui_2007@163.com">mahui_2007@163.com</a></p>
+    <p>🔗 课题组主页 / Lab Homepage:
+      <a href="http://faculty.neu.edu.cn/mahui/en/index/138064/list/index.htm" target="_blank">
+        马辉教授个人主页 / Prof. Ma Hui's Homepage
+      </a>
+    </p>
+  </div>
+</section>
+
+
+</div>
+<div id="gear" style="display:none">
+<nav>
+<h1>马辉教授课题组数据集——直/斜/人字齿轮传动系统典型故障实验</h1>
+<h1 style="text-align:center; font-weight:normal; font-size:16px; color:#666; margin-top:-10px;">
+  Datasets of Prof. Ma Hui's Research Group – Typical Fault Experiments on Spur, Helical and Herringbone Gear Transmission Systems
+</h1>
+<div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 24px; margin-bottom: 10px;">
+<a href="#overview">📁 数据集简介 / Overview</a>
+<a href="#herringbone">⚙️ 人字齿轮 / Herringbone</a>
+<a href="#helical">⚙️ 斜齿轮 / Helical</a>
+<a href="#spur">⚙️ 直齿轮 / Spur</a>
+</div>
+<div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 24px;">
+<a href="#platform">🛠️ 实验平台 / Platform</a>
+<a href="#download">📥 下载 / Download</a>
+<a href="#GearContact">📬 联系 / Contact</a>
+</div>
+</nav>
+<section data-aos="fade-up" id="overview">
+<h2>数据集简介 / Dataset Overview</h2>
+<div class="dataset-box">
+<p>本数据集涵盖三类齿轮类型（人字齿轮、斜齿轮、直齿轮）在五种典型故障模式下的振动信号，具有明确的故障标注与工况划分。该数据可广泛用于齿轮故障诊断、动力学模型验证、振动信号分析及智能分类等研究任务。</p>
+<p>This dataset contains vibration signals of three types of gears (Herringbone, Helical, and Spur) under five representative fault conditions, with clear fault labels and operating condition divisions. It is suitable for a wide range of research tasks, including gear fault diagnosis, dynamic model validation, vibration signal analysis, and intelligent classification.</p>
+<h3>📁 文件夹结构 / Folder Structure</h3>
+<table>
+<tr>
+<th>齿轮类型 / Gear Type</th>
+<th>包含故障类型 / Fault Types Included</th>
+</tr>
+<tr>
+<td>人字齿轮 / Herringbone Gear</td>
+<td>健康 / Healthy<br/>剥落 / Spalling<br/>裂纹 / Crack<br/>断齿 / Broken Tooth<br/>磨损 / Wear</td>
+</tr>
+<tr>
+<td>斜齿轮 / Helical Gear</td>
+<td>健康 / Healthy<br/>剥落 / Spalling<br/>裂纹 / Crack<br/>断齿 / Broken Tooth<br/>磨损 / Wear</td>
+</tr>
+<tr>
+<td>直齿轮 / Spur Gear</td>
+<td>健康 / Healthy<br/>剥落 / Spalling<br/>裂纹 / Crack<br/>断齿 / Broken Tooth<br/>磨损 / Wear</td>
+</tr>
+</table>
+<h3>📦 每类样本内容 / Sample Content</h3>
+<p>每个文件夹包含多个样本，格式为CSV，采样率为 <code>15360Hz</code>，每组实验时长为 30s。</p>
+</div>
+</section>
+<section data-aos="fade-up" id="herringbone">
+<h2>人字齿轮 / Herringbone Gear</h2>
+<div class="dataset-box">
+<div class="card">
+<h3>人字齿轮 - 健康工况 / Herringbone Gear - Healthy Conditions</h3>
+<table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>主动轮状态</th>
+<th>从动轮状态</th>
+<th>负载扭矩</th>
+<th>转速</th>
+<th>旋转方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主动轮(正常)-从动轮(正常)-10Nm-1000r-正转</td>
+<td>正常</td>
+<td>正常</td>
+<td>10 N·m</td>
+<td>1000 rpm</td>
+<td>正转</td>
+</tr>
+<tr>
+<td>主动轮(正常)-从动轮(正常)-10Nm-1000r-反转</td>
+<td>正常</td>
+<td>正常</td>
+<td>10 N·m</td>
+<td>1000 rpm</td>
+<td>反转</td>
+</tr>
+<tr>
+<td>主动轮(正常)-从动轮(正常)-15Nm-1000r-正转</td>
+<td>正常</td>
+<td>正常</td>
+<td>15 N·m</td>
+<td>1000 rpm</td>
+<td>正转</td>
+</tr>
+<tr>
+<td>主动轮(正常)-从动轮(正常)-15Nm-1000r-反转</td>
+<td>正常</td>
+<td>正常</td>
+<td>15 N·m</td>
+<td>1000 rpm</td>
+<td>反转</td>
+</tr>
+<tr>
+<td>主动轮(正常)-从动轮(正常)-20Nm-1000r-反转</td>
+<td>正常</td>
+<td>正常</td>
+<td>20 N·m</td>
+<td>1000 rpm</td>
+<td>反转</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<h3>人字齿轮 - 剥落工况 / Herringbone Gear - Spalling Conditions</h3>
+<table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>主动轮状态</th>
+<th>从动轮状态</th>
+<th>负载扭矩</th>
+<th>转速</th>
+<th>旋转方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主动轮(轻微剥落)-从动轮(正常)-10Nm-<br>1000r-反转</td>
+<td>轻微剥落</td>
+<td>正常</td>
+<td>10 N·m</td>
+<td>1000 rpm</td>
+<td>反转</td>
+</tr>
+<tr>
+<td>主动轮(轻微剥落)-从动轮(正常)-20Nm-<br>1000r-反转</td>
+<td>轻微剥落</td>
+<td>正常</td>
+<td>20 N·m</td>
+<td>1000 rpm</td>
+<td>反转</td>
+</tr>
+<tr>
+<td>主动轮(正常)-从动轮(重剥)-20Nm-<br>1000r-反转</td>
+<td>正常</td>
+<td>重度剥落</td>
+<td>20 N·m</td>
+<td>1000 rpm</td>
+<td>反转</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<h3>人字齿轮 - 裂纹工况 / Herringbone Gear - Crack Conditions</h3>
+<table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>主动轮状态</th>
+<th>从动轮状态</th>
+<th>负载扭矩</th>
+<th>转速</th>
+<th>旋转方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主动轮(轻裂)-从动轮(轻裂)-10Nm-1000r</td>
+<td>轻度裂纹</td>
+<td>轻度裂纹</td>
+<td>10 N·m</td>
+<td>1000 rpm</td>
+<td>正转</td>
+</tr>
+<tr>
+<td>主动轮(轻裂)-从动轮(轻裂)-15Nm-1000r</td>
+<td>轻度裂纹</td>
+<td>轻度裂纹</td>
+<td>15 N·m</td>
+<td>1000 rpm</td>
+<td>正转</td>
+</tr>
+<tr>
+<td>主动轮(正常)-从动轮(重裂)-10Nm-1000r</td>
+<td>正常</td>
+<td>重度裂纹</td>
+<td>10 N·m</td>
+<td>1000 rpm</td>
+<td>正转</td>
+</tr>
+<tr>
+<td>主动轮(正常)-从动轮(重裂)-15Nm-1000r</td>
+<td>正常</td>
+<td>重度裂纹</td>
+<td>15 N·m</td>
+<td>1000 rpm</td>
+<td>正转</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<h3>人字齿轮 - 断齿工况 / Herringbone Gear - Broken Tooth Conditions</h3>
+<table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>主动轮状态</th>
+<th>从动轮状态</th>
+<th>负载扭矩</th>
+<th>转速</th>
+<th>旋转方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主动轮(轻断)-从动轮(正常)-10Nm-1000r</td>
+<td>轻度断齿</td>
+<td>正常</td>
+<td>10 N·m</td>
+<td>1000 rpm</td>
+<td>正转</td>
+</tr>
+<tr>
+<td>主动轮(轻断)-从动轮(正常)-15Nm-1000r</td>
+<td>轻度断齿</td>
+<td>正常</td>
+<td>15 N·m</td>
+<td>1000 rpm</td>
+<td>正转</td>
+</tr>
+<tr>
+<td>主动轮(正常)-从动轮(重断)-15Nm-1000r</td>
+<td>正常</td>
+<td>重度断齿</td>
+<td>15 N·m</td>
+<td>1000 rpm</td>
+<td>正转</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<h3>人字齿轮 - 磨损故障工况 / Herringbone Gear - Wear Fault Conditions</h3>
+<table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>主动轮状态</th>
+<th>从动轮状态</th>
+<th>负载扭矩</th>
+<th>转速</th>
+<th>旋转方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主动轮(轻磨)-从动轮(正常)-10Nm-1000r</td>
+<td>轻度磨损</td>
+<td>正常</td>
+<td>10 N·m</td>
+<td>1000 rpm</td>
+<td>正转</td>
+</tr>
+<tr>
+<td>主动轮(轻磨)-从动轮(正常)-20Nm-1000r</td>
+<td>轻度磨损</td>
+<td>正常</td>
+<td>20 N·m</td>
+<td>1000 rpm</td>
+<td>正转</td>
+</tr>
+<tr>
+<td>主动轮(正常)-从动轮(轻磨)-10Nm-1000r-反转</td>
+<td>正常</td>
+<td>轻度磨损</td>
+<td>10 N·m</td>
+<td>1000 rpm</td>
+<td>反转</td>
+</tr>
+<tr>
+<td>主动轮(正常)-从动轮(轻磨)-20Nm-1000r-反转</td>
+<td>正常</td>
+<td>轻度磨损</td>
+<td>20 N·m</td>
+<td>1000 rpm</td>
+<td>反转</td>
+</tr>
+<tr>
+<td>主动轮(正常)-从动轮(重磨)-10Nm-1000r-反转</td>
+<td>正常</td>
+<td>重度磨损</td>
+<td>10 N·m</td>
+<td>1000 rpm</td>
+<td>反转</td>
+</tr>
+<tr>
+<td>主动轮(正常)-从动轮(重磨)-20Nm-1000r-反转</td>
+<td>正常</td>
+<td>重度磨损</td>
+<td>20 N·m</td>
+<td>1000 rpm</td>
+<td>反转</td>
+</tr>
+<tr>
+<td>主动轮(重磨)-从动轮(正常)-10Nm-1000r</td>
+<td>重度磨损</td>
+<td>正常</td>
+<td>10 N·m</td>
+<td>1000 rpm</td>
+<td>正转</td>
+</tr>
+<tr>
+<td>主动轮(重磨)-从动轮(正常)-20Nm-1000r</td>
+<td>重度磨损</td>
+<td>正常</td>
+<td>20 N·m</td>
+<td>1000 rpm</td>
+<td>正转</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></section>
+<section data-aos="fade-up" id="helical">
+<h2>斜齿轮 / Helical Gear</h2>
+<div class="dataset-box">
+<div class="card">
+<h3>斜齿轮 - 健康工况 / Helical Gear - Healthy Conditions</h3>
+<table>
+<thead>
+<tr>
+<th>文件名</th><th>主动轮状态</th><th>从动轮状态</th><th>负载扭矩</th><th>转速</th><th>旋转方向</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>主动轮(正常)-从动轮(正常)-10Nm-1000r</td><td>正常</td><td>正常</td><td>10 N·m</td><td>1000 rpm</td><td>正转</td></tr>
+<tr><td>主动轮(正常)-从动轮(正常)-15Nm-1000r</td><td>正常</td><td>正常</td><td>15 N·m</td><td>1000 rpm</td><td>正转</td></tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<h3>斜齿轮 - 剥落故障工况 / Helical Gear - Spalling Fault Conditions</h3>
+<table>
+<thead>
+<tr>
+<th>文件名</th><th>主动轮状态</th><th>从动轮状态</th><th>负载扭矩</th><th>转速</th><th>旋转方向</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>主动轮(轻剥)-从动轮(正常)-10Nm-1000r</td><td>轻度剥落</td><td>正常</td><td>10 N·m</td><td>1000 rpm</td><td>正转</td></tr>
+<tr><td>主动轮(轻剥)-从动轮(正常)-15Nm-1000r</td><td>轻度剥落</td><td>正常</td><td>15 N·m</td><td>1000 rpm</td><td>正转</td></tr>
+<tr><td>主动轮(正常)-从动轮(重剥)-10Nm-1000r</td><td>正常</td><td>重度剥落</td><td>10 N·m</td><td>1000 rpm</td><td>正转</td></tr>
+<tr><td>主动轮(正常)-从动轮(重剥)-15Nm-1000r</td><td>正常</td><td>重度剥落</td><td>15 N·m</td><td>1000 rpm</td><td>正转</td></tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<h3>斜齿轮 - 裂纹故障工况 / Helical Gear - Crack Fault Conditions</h3>
+<table>
+<thead>
+<tr>
+<th>文件名</th><th>主动轮状态</th><th>从动轮状态</th><th>负载扭矩</th><th>转速</th><th>旋转方向</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>主动轮(轻裂)-从动轮(正常)-10Nm-1000r</td><td>轻度裂纹</td><td>正常</td><td>10 N·m</td><td>1000 rpm</td><td>正转</td></tr>
+<tr><td>主动轮(轻裂)-从动轮(正常)-15Nm-1000r</td><td>轻度裂纹</td><td>正常</td><td>15 N·m</td><td>1000 rpm</td><td>正转</td></tr>
+<tr><td>主动轮(正常)-从动轮(重裂)-10Nm-1000r</td><td>正常</td><td>重度裂纹</td><td>10 N·m</td><td>1000 rpm</td><td>正转</td></tr>
+<tr><td>主动轮(正常)-从动轮(重裂)-15Nm-1000r</td><td>正常</td><td>重度裂纹</td><td>15 N·m</td><td>1000 rpm</td><td>正转</td></tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<h3>斜齿轮 - 断齿故障工况 / Helical Gear - Tooth Breakage Fault Conditions</h3>
+<table>
+<thead>
+<tr>
+<th>文件名</th><th>主动轮状态</th><th>从动轮状态</th><th>负载扭矩</th><th>转速</th><th>旋转方向</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>主动轮(正常)-从动轮(轻断)-10Nm-1000r</td><td>正常</td><td>轻度断齿</td><td>10 N·m</td><td>1000 rpm</td><td>正转</td></tr>
+<tr><td>主动轮(正常)-从动轮(轻断)-15Nm-1000r</td><td>正常</td><td>轻度断齿</td><td>15 N·m</td><td>1000 rpm</td><td>正转</td></tr>
+<tr><td>主动轮(正常)-从动轮(重断)-10Nm-1000r</td><td>正常</td><td>重度断齿</td><td>10 N·m</td><td>1000 rpm</td><td>正转</td></tr>
+<tr><td>主动轮(正常)-从动轮(重断)-15Nm-1000r</td><td>正常</td><td>重度断齿</td><td>15 N·m</td><td>1000 rpm</td><td>正转</td></tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<h3>斜齿轮 - 磨损故障工况 / Helical Gear - Wear Fault Conditions</h3>
+<table>
+<thead>
+<tr>
+<th>文件名</th><th>主动轮状态</th><th>从动轮状态</th><th>负载扭矩</th><th>转速</th><th>旋转方向</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>主动轮(轻磨)-从动轮(正常)-10Nm-1000r</td><td>轻度磨损</td><td>正常</td><td>10 N·m</td><td>1000 rpm</td><td>正转</td></tr>
+<tr><td>主动轮(轻磨)-从动轮(正常)-15Nm-1000r</td><td>轻度磨损</td><td>正常</td><td>15 N·m</td><td>1000 rpm</td><td>正转</td></tr>
+<tr><td>主动轮(正常)-从动轮(轻磨)-10Nm-1000r</td><td>正常</td><td>轻度磨损</td><td>10 N·m</td><td>1000 rpm</td><td>正转</td></tr>
+<tr><td>主动轮(正常)-从动轮(轻磨)-15Nm-1000r</td><td>正常</td><td>轻度磨损</td><td>15 N·m</td><td>1000 rpm</td><td>正转</td></tr>
+</tbody>
+</table>
+</div>
+</div></section>
+<section data-aos="fade-up" id="spur">
+<h2>直齿轮 / Spur Gear</h2>
+<div class="card">
+<h3>直齿轮 - 健康工况 / Spur Gear - Healthy Conditions</h3>
+<table>
+<tr><th>文件名</th><th>主动轮</th><th>从动轮</th><th>扭矩</th><th>转速</th></tr>
+<tr><td>主动轮(正常)-从动轮(正常)-10Nm-1000r</td><td>正常</td><td>正常</td><td>10 N·m</td><td> 1000rpm</td></tr>
+<tr><td>主动轮(正常)-从动轮(正常)-15Nm-1000r</td><td>正常</td><td>正常</td><td>15 N·m</td><td> 1000rpm</td></tr>
+</table>
+</div>
+<div class="card">
+<h3>直齿轮 - 剥落故障工况 / Spur Gear - Spalling Fault Conditions</h3>
+<table>
+<tr><th>文件名</th><th>主动轮</th><th>从动轮</th><th>扭矩</th><th>转速</th></tr>
+<tr><td>主动轮(轻剥)-从动轮(正常)-10Nm-1000r</td><td>轻度剥落</td><td>正常</td><td>10 N·m</td><td>1000 rpm</td></tr>
+<tr><td>主动轮(轻剥)-从动轮(正常)-15Nm-1000r</td><td>轻度剥落</td><td>正常</td><td>15 N·m</td><td>1000 rpm</td></tr>
+<tr><td>主动轮(正常)-从动轮(重剥)-15Nm-1000r</td><td>正常</td><td>重度剥落</td><td>15 N·m</td><td>1000 rpm</td></tr>
+<tr><td>主动轮(重剥)-从动轮(正常)-15Nm-1000r</td><td>重度剥落</td><td>正常</td><td>15 N·m</td><td>1000 rpm</td></tr>
+</table>
+</div>
+<div class="card">
+<h3>直齿轮 - 裂纹故障工况 / Spur Gear - Crack Fault Conditions</h3>
+<table>
+<tr><th>文件名</th><th>主动轮</th><th>从动轮</th><th>扭矩</th><th>转速</th></tr>
+<tr><td>主动轮(轻裂)-从动轮(正常)-10Nm-1000r</td><td>轻度裂纹</td><td>正常</td><td>10 N·m</td><td>1000 rpm</td></tr>
+<tr><td>主动轮(轻裂)-从动轮(正常)-15Nm-1000r</td><td>轻度裂纹</td><td>正常</td><td>15 N·m</td><td>1000 rpm</td></tr>
+<tr><td>主动轮(正常)-从动轮(轻裂)-10Nm-1000r</td><td>正常</td><td>轻度裂纹</td><td>10 N·m</td><td>1000 rpm</td></tr>
+<tr><td>主动轮(正常)-从动轮(轻裂)-15Nm-1000r</td><td>正常</td><td>轻度裂纹</td><td>15 N·m</td><td>1000 rpm</td></tr>
+<tr><td>主动轮(正常)-从动轮(重裂)-10Nm-1000r</td><td>正常</td><td>重度裂纹</td><td>10 N·m</td><td>1000 rpm</td></tr>
+<tr><td>主动轮(正常)-从动轮(重裂)-15Nm-1000r</td><td>正常</td><td>重度裂纹</td><td>15 N·m</td><td>1000 rpm</td></tr>
+</table>
+</div>
+<div class="card">
+<h3>直齿轮 - 断齿故障工况 / Spur Gear - Tooth Breakage Fault Conditions</h3>
+<table>
+<tr><th>文件名</th><th>主动轮</th><th>从动轮</th><th>扭矩</th><th>转速</th></tr>
+<tr><td>主动轮(正常)-从动轮(轻断)-10Nm-1000r</td><td>正常</td><td>轻度断齿</td><td>10 N·m</td><td>1000 rpm</td></tr>
+<tr><td>主动轮(正常)-从动轮(轻断)-15Nm-1000r</td><td>正常</td><td>轻度断齿</td><td>15 N·m</td><td>1000 rpm</td></tr>
+<tr><td>主动轮(正常)-从动轮(重断)-10Nm-1000r</td><td>正常</td><td>重度断齿</td><td>10 N·m</td><td>1000 rpm</td></tr>
+<tr><td>主动轮(正常)-从动轮(重断)-15Nm-1000r</td><td>正常</td><td>重度断齿</td><td>15 N·m</td><td>1000 rpm</td></tr>
+</table>
+</div>
+<div class="card">
+<h3>直齿轮 - 磨损故障工况 / Spur Gear - Wear Fault Conditions</h3>
+<table>
+<tr><th>文件名</th><th>主动轮</th><th>从动轮</th><th>扭矩</th><th>转速</th></tr>
+<tr><td>主动轮(轻磨)-从动轮(正常)-10Nm-1000r</td><td>轻度磨损</td><td>正常</td><td>10 N·m</td><td>1000 rpm</td></tr>
+<tr><td>主动轮(轻磨)-从动轮(正常)-15Nm-1000r</td><td>轻度磨损</td><td>正常</td><td>15 N·m</td><td>1000 rpm</td></tr>
+<tr><td>主动轮(正常)-从动轮(重磨)-10Nm-1000r</td><td>正常</td><td>重度磨损</td><td>10 N·m</td><td>1000 rpm</td></tr>
+<tr><td>主动轮(正常)-从动轮(重磨)-15Nm-1000r</td><td>正常</td><td>重磨磨损</td><td>15 N·m</td><td>1000 rpm</td></tr>
+<tr><td>主动轮(重磨)-从动轮(正常)-10Nm-1000r</td><td>重度磨损</td><td>正常</td><td>10 N·m</td><td>1000 rpm</td></tr>
+<tr><td>主动轮(重磨)-从动轮(正常)-15Nm-1000r</td><td>重度磨损</td><td>正常</td><td>15 N·m</td><td>1000 rpm</td></tr>
+</table>
+</div>
+</section>
+<section data-aos="fade-up" id="platform">
+<h2>🛠️ 实验平台 / Experimental Platform</h2>
+<figure style="margin-top: 15px; text-align: center;">
+<img alt="实验平台结构图" src="Gear1.jpg" style="width:80%; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.1);"/>
+<figcaption style="font-size: 14px; color: #555; margin-top: 8px;">
+      图1：实验平台结构图，包括(a) 故障齿轮箱、(b) 控制系统、(c) 数据采集装置、(d) 齿轮箱内部结构图（A/B/C为加速度传感器）。
+      <br/>
+      Fig. 1: Structure of the experimental platform, including (a) fault gearbox, (b) control system, (c) data acquisition device, and (d) internal gearbox structure with accelerometers A/B/C.
+    </figcaption>
+</figure>
+<p style="font-size:14px;color:#555;margin-top:10px;">
+
+    齿轮传动装置故障实验采用如图所示的一级平行轴齿轮故障模拟试验台。该试验台由铸铁底板、11kW 伺服电机、一级平行轴齿轮箱、扭矩转速仪、可编程加载器、系统 PLC 控制柜以及故障齿轮组件等组成，可灵活配置振动、转速、噪声等重要测量仪器，能够模拟旋转机械升降速过程及稳态工况下的振动响应。通过在齿轮箱中分别安装直齿轮、斜齿轮和人字齿轮故障件，模拟不同类型齿轮在典型故障下的运行状态并采集数据。
+  </p>
+<figure style="margin-top: 15px; text-align: center;">
+<img alt="实验平台结构图" src="Gear2.jpg" style="width:70%; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.1);"/>
+<figcaption style="font-size: 14px; color: #555; margin-top: 8px;">
+      图2：实验轴承图片（更多详见“实验图片”文件夹）
+      <br/>
+      Figure 2: Experimental bearing image (See more in the “实验图片” folder)
+    </figcaption>
+</section>
+<section data-aos="fade-up" id="download">
+<h2>📥 数据下载 / Download</h2>
+<p style="margin-bottom: 20px;">点击下方按钮获取完整数据集文件（GearDatasets.rar）：</p>
+<a class="btn-pan" href="https://pan.baidu.com/s/1picBykhal57LEjyAAzNp-Q?pwd=MHTD" target="_blank">
+    🧳 百度网盘下载 / Baidu Netdisk（提取码: <strong>MHTD</strong>）
+  </a>
+<p style="margin-top: 20px; ">
+  📚 如果在论文、专著等出版物中使用了本数据集，请引用以下文献：<br/>
+   If you use this dataset in publications such as papers or books, please cite the following reference:
+    <ol style="line-height:1.8; padding-left:20px; font-size:15px; color:#333;">
+    <li>
+      C. Fan, Y. Zhang, H. Ma, K. Yu, Z. Ma,
+      <b>A novel lightweight DDPM-based data augmentation method for rotating machinery fault diagnosis with small sample</b>,
+      <i>Mechanical Systems and Signal Processing</i>, 232 (2025) 112741.
+    </li>
+    <li>
+      C. Fan, Y. Zhang, H. Ma, Z. Ma,
+      <b>A novel deep denoising model integrating transformer and time–frequency loss for gearbox fault diagnosis</b>,
+      <i>Advanced Engineering Informatics</i>, 66 (2025) 103400.
+    </li>
+    <li>
+      C. Fan, Y. Zhang, H. Ma, Z. Ma, K. Yu, S. Zhao, X. Zhang,
+      <b>A novel metric-based model with the ability of zero-shot learning for intelligent fault diagnosis</b>,
+      <i>Engineering Applications of Artificial Intelligence</i>, 129 (2024) 107605.
+    </li>
+    <li>
+      Z. Liu, E. Shang, Y. Huangfu, H. Ma, J. Zhu, S. Zhao, X. Long, Z. Li,
+      <b>Vibration characteristics analysis of flexible helical gear system with multi-tooth spalling fault: Simulation and experimental study</b>,
+      <i>Mechanical Systems and Signal Processing</i>, 201 (2023) 110687.
+    </li>
+    <li>
+      Z. Liu, C. Chang, H. Hu, H. Ma, K. Yuan, X. Li, X. Zhao, Z. Peng,
+      <b>Dynamic characteristics of spur gear system with tooth root crack considering gearbox flexibility</b>,
+      <i>Mechanical Systems and Signal Processing</i>, 208 (2024) 110966.
+    </li>
+  </ol>
+</p>
+</section>
+<section data-aos="fade-up" id="GearContact">
+<h2>联系方式 / Contact</h2>
+<p>📧 邮箱 / Email: mahui_2007@163.com</p>
+<p>🔗 课题组主页 / Lab Homepage:
+    <a href="http://faculty.neu.edu.cn/mahui/en/index/138064/list/index.htm" target="_blank">
+      马辉教授个人主页 / Prof. Ma Hui's Homepage
+    </a>
+</p>
+</section>
+
+</div>
+
+<div id="bearing" style="display:none">
+ <nav>
+<h1>马辉教授课题组数据集——轴承保持架全生命周期数据集</h1>
+<h1 style="text-align:center; font-weight:normal; font-size:16px; color:#666; margin-top:-10px;">
+  Datasets of Prof. Ma Hui's Research Group – Bearing Cage Full Lifecycle Dataset
+</h1>
+<div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 24px; margin-bottom: 10px;">
+<a href="#BearingOverview">📁 数据集简介 / Overview</a>
+   <a href="#BearingPlatform">🛠️ 实验平台 / Platform</a>
+<a href="#6210">🛞 案例1 /Case 1  </a>
+</div>
+<div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 24px;">
+<a href="#6211">🛞 案例2 /Case 2  </a>
+<a href="#BearingDownload">📥 下载 / Download</a>
+<a href="#BearingContact">📬 联系 / Contact</a>
+</div>
+</nav>
+<section data-aos="fade-up" id="BearingOverview">
+<h2>数据集简介 / Dataset Overview</h2>
+<div class="dataset-box">
+<p>该数据集包含2个滚动轴承(6210和6011型)保持架断裂的全生命周期实验。一共包含7个通道全生命周期信号。本数据集是公开的，任何人都可以使用它们来验证滚动轴承的诊断以及剩余寿命预测算法。</p>
+</div>
+</section>
+
+
+<section data-aos="fade-up" id="BearingPlatform">
+<h2>实验平台 / Platform</h2>
+<div class="dataset-box">
+<p>轴承疲劳试验台如图1所示，该试验台由动力系统、控制系统、试验件系统、驱动系统、加载系统五大部分组成。该试验台采用功率3 kW，最高转速6000 r/min的电机驱动。可在控制电脑上设置转速等参数，通过变频器控制电机的转速。试验件系统和加载系统如图2 (a)所示。其中，试验件系统主要包括1个试验箱、3个轴承座、4个轴承、1个驱动轴、2个轴套和2个旋紧螺母组成。</p>
+<p>首先将4个深沟球轴承、轴套依次与驱动轴装配。本文标定试验件中轴承从左到右的顺序依次为轴承1-4。随后，将试验件依次安装进三个轴承座之中。其中，1号和3号轴承座分别与1号和4号轴承相配合；2号轴承座与2号和3号轴承相配合。</p>
+<p>最后，将含有试验件的轴承座整体下放到试验箱里。该试验台可以分别施加轴向与径向载荷，可通过调整不同质量砝码的方式模拟不同的载荷工况。试验台的加载方式示意图，如图2 (b)所示。</p>
+<figure style="text-align:center;">
+  <img src="Bearing1.jpg" alt="图1. 滚动轴承疲劳试验台" style="width:80%; max-width:800px; margin: 10px auto;">
+  <figcaption style="font-size:14px; color:#555;">图1. 滚动轴承疲劳试验台</figcaption>
+</figure>
+
+<figure style="text-align:center;">
+  <img src="Bearing2a.jpg" alt="(a) 实物图" style="width:80%; max-width:600px; margin: 10px auto;">
+  <figcaption style="font-size:14px; color:#555;">(a) 实物图</figcaption>
+</figure>
+
+<figure style="text-align:center;">
+  <img src="Bearing2b.jpg" alt="(b) 示意图" style="width:80%; max-width:400px; margin: 10px auto;">
+  <figcaption style="font-size:14px; color:#555;">(b) 示意图</figcaption>
+</figure>
+
+<p style="text-align:center; font-size:14px; color:#555; margin-top: -5px;">
+图2. 试验件系统及加载装置实物图与示意图 ：(a) 实物图，(b) 示意图。
+</p>
+
+<p>试验台的测试系统与传感器布置实物图如图1所示。在1号、2号轴承座外表面各粘贴一个PCB-356A01型三轴加速度传感器，该传感器可分别测得X、Y、Z方向的振动加速度信号。其中，1号振动加速度传感器布置在1号轴承座外部，可以测得1号轴承的振动数据。2号振动加速度传感器布置在2号轴承座外部，可测得2号和3号轴承的振动数据。将两处测点的振动加速度信号通过信号输入线传送到数据采集仪当中，将模拟信号转换为数据软件可以读取的数字信号，实时显示在数据分析电脑上。测试系统的采样频率为20 kHz。</p>
+
+</div>
+</section>
+
+<section data-aos="fade-up" id="6210">
+<h2>案例1：6210轴承实验 / Case 1: 6210</h2>
+<div class="dataset-box">
+<p>将4个健康6210轴承按照上述方式安装在试验箱中。6210型轴承详细参数如表1所示。在转速为4200 r/min，径向和轴向载荷分别为6.8kN和1.4kN条件下进行实验。当轴承在上述测试条件下运行约1017秒时，轴承故障可能导致测试台自动停止。收集了轴承从正常运行到停机期间的振动加速度和温度信号，结果如图3所示。</p>
+
+<table class="dataset-table">
+  <caption>表1. 6210型轴承详细参数 / Specification of 6210 Bearing</caption>
+  <thead>
+    <tr>
+      <th>参数 / Parameter</th>
+      <th>数值 / Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>轴承型号 / Bearing type</td><td>6210</td></tr>
+    <tr><td>内径 / Inner diameter</td><td>50 mm</td></tr>
+    <tr><td>外径 / Outer diameter</td><td>90 mm</td></tr>
+    <tr><td>宽度 / Width</td><td>20 mm</td></tr>
+    <tr><td>球数 / Number of balls</td><td>10</td></tr>
+    <tr><td>额定载荷 / Rated load</td><td>29.7 kN</td></tr>
+  </tbody>
+</table>
+
+<figure style="text-align:center;">
+  <img src="Bearing3.jpg" alt="图3. 6210轴承全生命周期信号" style="width:100%; max-width:800px; margin: 10px auto;">
+  <figcaption style="font-size:14px; color:#555;">图3. 6210轴承全生命周期信号</figcaption>
+</figure>
+
+<p>图4为拆解后6210轴承的照片。从图中可以看出，1号轴承在上述工况下长时间运行后出现保持架故障，损坏程度极其严重。笼子上的十个连接铆钉中有六个断裂，三个球脱离了原来的位置，其中两个球彼此靠近。明显的消融痕迹显示在保持架和球上。用手转动轴承内圈时，轴承运行不太平稳。</p>
+
+<figure style="text-align:center;">
+  <img src="Bearing4.png" alt="图4. 拆解后6210轴承照片" style="width:60%; max-width:800px; margin: 10px auto;">
+  <figcaption style="font-size:14px; color:#555;">图4. 拆解后6210轴承照片</figcaption>
+</figure>
+
+</div>
+</section>
+
+<section data-aos="fade-up" id="6211">
+<h2>案例2：6011轴承实验 / Case 2: 6011</h2>
+<div class="dataset-box">
+<p>为了进一步验证上述测试结果的可重复性，重新安装了一组新的6011轴承进行重复测试。轴承参数如表2所示。设置运行转速为4200 r/min，在试验台上施加径向载荷5.1 kN、轴向载荷为1.4 kN，经过长时间的运转以模拟轴承从健康状态到保持架发生真实疲劳断裂状态。在试验进行到第3673秒左右时，试验设备突然发生异响，此后，试验台又运转了一段时间，由于在短时间内连续多次振幅超标，试验台在第3738秒时自动停机。实时测量并记录轴承在全生命周期中的振动数据，两个振动加速度传感器(测点1、2处)采集的轴承全生命周期y方向振动信号分别如图5(a)与5(b)所示。</p>
+
+<table class="dataset-table">
+  <caption>表2. 6011型轴承详细参数 / Specification of 6011 Bearing</caption>
+  <thead>
+    <tr>
+      <th>参数 / Parameter</th>
+      <th>数值 / Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>轴承型号 / Bearing type</td><td>6011</td></tr>
+    <tr><td>内径 / Inner diameter</td><td>55 mm</td></tr>
+    <tr><td>外径 / Outer diameter</td><td>90 mm</td></tr>
+    <tr><td>宽度 / Width</td><td>18 mm</td></tr>
+    <tr><td>球数 / Number of balls</td><td>9</td></tr>
+    <tr><td>额定载荷 / Rated load</td><td>25.6 kN</td></tr>
+  </tbody>
+</table>
+
+
+<figure style="text-align:center;">
+  <img src="Bearing5.jpg" alt="图5. 6011轴承全生命周期信号" style="width:100%; max-width:800px; margin: 10px auto;">
+  <figcaption style="font-size:14px; color:#555;">图5. 6011轴承全生命周期信号</figcaption>
+</figure>
+
+<p>在试验台停机后，拆解试验件时发现轴承存在保持架断裂，其余轴承均较为完好。轴承的故障照片如图6所示。由此可以确定在试验进行到3673秒后的异常振动现象是由于保持架断裂故障所引起的。另外，在保持架的球兜处出现了磨损痕迹，这是由于异常载荷作用下使轴承内外圈之间发生了相对变形，导致保持架与内外套圈之间发生了挤压磨损。1、2、4号轴承则较为完好，未发现轴承损伤故障。</p>
+
+<figure style="text-align:center;">
+  <img src="Bearing6.png" alt="图6. 拆解后6011轴承照片" style="width:100%; max-width:800px; margin: 10px auto;">
+  <figcaption style="font-size:14px; color:#555;">图6. 拆解后6011轴承照片</figcaption>
+</figure>
+更多的轴承照片和实验平台原图详见下载文件夹
+</div>
+</section>
+
+<section data-aos="fade-up" id="BearingDownload">
+<h2>📥 下载 / Download</h2>
+<div class="dataset-box">
+<p>数据结构如下所示，一个轴承包含5个通道文件（通道4，5因效果较差未提供）：</p>
+<pre>
+保持架数据
+├─ 6210
+│  └─ 径向6.8 kN - 轴向1.4 kN - 70Hz - 数据
+│      ├─ 1-x.mat
+│      ├─ 2-y.mat
+│      ├─ 3-z.mat
+│      ├─ 6-z.mat
+│      └─ 7-y.mat
+├─ 6011
+│  └─ 径向5.1 kN - 轴向1.4 kN - 70Hz - 数据
+│      ├─ 1-x.mat
+│      ├─ 2-y.mat
+│      ├─ 3-z.mat
+│      ├─ 6-z.mat
+│      └─ 7-y.mat
+└─ 照片
+   ├─ 轴承
+   └─ 实验台
+
+</pre>
+
+<p>测点1（左侧1号轴承座上方）：通道1-x方向；通道2-y方向；通道3-z方向</p>
+<p>测点2（2、3号轴承座上方）：通道6-z方向</p>
+<p>测点3（2、3号轴承座上方）：通道7-y方向</p>
+
+<p>数据以 mat 格式保存，以 1-x.mat 为例，数据结构如下，保存在变量 Datas 中。</p>
+
+  <div class="dataset-box">
+
+<p style="margin-bottom: 20px;">点击下方按钮获取完整数据集文件（GearDatasets.rar）：</p>
+<a class="btn-pan" href="https://pan.baidu.com/s/1HsSRJuMIs4npz2NLJKIGCw?pwd=MHTD" target="_blank">
+    🧳 百度网盘下载 / Baidu Netdisk（提取码: <strong>MHTD</strong>）
+  </a>
+
+<p style="margin-top: 20px; ">
+  📚 如果在论文、专著等出版物中使用了本数据集，请引用以下文献：<br/>
+   If you use this dataset in publications such as papers or books, please cite the following reference:
+</p>
+    <ol>
+      <li>
+        C. Fan, P. Wang, Y. Zhang, H. Ma, X. Li, Q. Wang,<br>
+        <i>Digital Twin Assisted Degradation Assessment of Bearing Cage Performance</i>,<br>
+        IEEE Transactions on Industrial Informatics, <b>21</b>(7) (2025): 5171–5181.
+      </li>
+      <li>
+        C. Fan, P. Wang, H. Ma, Y. Zhang, Z. Ma, X. Yin, X. Zhang, S. Zhao,<br>
+        <i>Performance degradation assessment of rolling bearing cage failure based on enhanced CycleGAN</i>,<br>
+        Expert Systems with Applications, <b>255</b> (2024): 124697.
+      </li>
+      <li>
+        P. Wang, Y. Yang, H. Ma, H. Xu, X. Li, Z. Luo, B. Wen,<br>
+        <i>Vibration characteristics of rotor–bearing system with angular misalignment and cage fracture: Simulation and experiment</i>,<br>
+        Mechanical Systems and Signal Processing, <b>182</b> (2023): 109545.
+      </li>
+      <li>
+        Y. Yang, H. Liu, H. Ma, P. Wang, Q. Han, B. Wen,<br>
+        <i>Experimental study on vibration characteristics due to cage damage of deep groove ball bearing</i>,<br>
+        Tribology International, <b>185</b> (2023): 108555.
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section data-aos="fade-up" id="BearingContact">
+<h2>联系方式 / Contact</h2>
+<p>📧 邮箱 / Email: mahui_2007@163.com</p>
+<p>🔗 课题组主页 / Lab Homepage:
+    <a href="http://faculty.neu.edu.cn/mahui/en/index/138064/list/index.htm" target="_blank">
+      马辉教授个人主页 / Prof. Ma Hui's Homepage
+    </a>
+</p>
+</section>
+
 </html>
+
+<!-- 引入 AOS 动画库（如果还没引入） -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: false,
+    mirror: true
+  });
+</script>
+<script>
+  function openTab(evt, tabName) {
+    const sections = ['intro', 'gear', 'bearing'];
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = (id === tabName) ? 'block' : 'none';
+    });
+
+    const btns = document.getElementsByClassName('tablink');
+    for (let i = 0; i < btns.length; i++) {
+      btns[i].classList.remove('active');
+    }
+    evt.currentTarget.classList.add('active');
+        // 切换标签后回到顶部
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // 平滑滚动
+    });
+  }
+
+  // 页面初始化显示 intro
+  window.onload = function() {
+    openTab({currentTarget: document.querySelector('.tablink.active')}, 'intro');
+  };
+</script>
+
+<script>
+function showTab(tabId) {
+  // 1. 隐藏所有 tab 内容
+  document.querySelectorAll('div[id]').forEach(el => {
+    el.style.display = 'none';
+  });
+
+  // 2. 显示目标 tab
+  const target = document.getElementById(tabId);
+  if (target) {
+    target.style.display = 'block';
+    // 平滑滚动到顶部
+    setTimeout(() => {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  }
+}
+</script>
