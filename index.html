@@ -789,7 +789,8 @@ table tbody tr:hover {
 <p style="font-size:14px;color:#555;margin-top:10px;">
 
     齿轮传动装置故障实验采用如图所示的一级平行轴齿轮故障模拟试验台。该试验台由铸铁底板、11kW 伺服电机、一级平行轴齿轮箱、扭矩转速仪、可编程加载器、系统 PLC 控制柜以及故障齿轮组件等组成，可灵活配置振动、转速、噪声等重要测量仪器，能够模拟旋转机械升降速过程及稳态工况下的振动响应。通过在齿轮箱中分别安装直齿轮、斜齿轮和人字齿轮故障件，模拟不同类型齿轮在典型故障下的运行状态并采集数据。
-  </p>
+    通过在主动轴输入轴承、从动轴输入输出处设置3个采样点，9个通道（每个数据文件的前九列）分别对A、B、C传感器的x、y和z方向的加速度信号进行采集，采样频率为15 kHz，即A（x，y，z）B（x，y，z）C（x，y，z），x为轴向，y为垂直于纸面的径向，z为平行于纸面的径向。
+</p>
 <figure style="margin-top: 15px; text-align: center;">
 <img alt="实验平台结构图" src="Gear2.jpg" style="width:70%; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.1);"/>
 <figcaption style="font-size: 14px; color: #555; margin-top: 8px;">
@@ -1114,3 +1115,4 @@ function showTab(tabId) {
   }
 }
 </script>
+
